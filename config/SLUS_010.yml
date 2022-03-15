@@ -1,0 +1,46 @@
+options:
+  platform:     psx
+  basename:     SLUS_010.71
+  base_path:    .
+  target_path:  ../SLUS_010/SLUS_010.71
+  asm_path:     ../asm/boot
+  asset_path:   ../assets/boot
+  src_path:     ../src/boot
+  # compiler
+  compiler: GCC
+  # disasm/linker
+  symbol_addrs_path:    symbol_addrs.SLUS_010.txt
+  undefined_syms_path:  undefined_syms.SLUS_010.txt
+  undefined_funcs_auto_path:  undefined_funcs_auto.SLUS_010.txt
+  undefined_syms_auto_path:   undefined_syms_auto.SLUS_010.txt
+  find_file_boundaries: True
+  enable_ld_alignment_hack: True
+  use_legacy_include_asm: False
+  gp_value: 0x8009a6d0
+segments:
+  - [0x0, header]    # data?
+  - [0x84, bin]      # zero padding
+  - name:  main
+    type:  code
+    start: 0x00000800
+    vram:  0x80010000    # per header
+    subalign: 4
+    subsegments:
+      - [0x800, data]     # data?
+      - [0x333C, c]       # first function
+      - [0x9590, c]       # GsGetWorkBase
+      - [0x95BC, c]       # Continue Game functions
+      - [0x9808, c]       # Main Function
+      - [0xAC94, c]       # GsGetWorkBase_0
+      - [0xACA4, c]       # Continue Game functions
+      - [0x1320C, c]       # InitCard
+      - [0x13264, c]       # Continue Game functions
+      - [0x1B260, c]       # DsFlush
+      - [0x1B290, c]       # Continue Game functions
+      - [0x51D88, c]       # Start Function
+      - [0x51E44, c]       # start of library funnctions
+      - [0x57214, c]       # Another set of library functions
+      - [0x6DD84, c]       # Continue Game functions/Objects
+      - [0x6FC1C, bin]    #data
+  #- [0x53600, bin, trailer] # 0 to end
+  - [0x7BFFF]
