@@ -21,6 +21,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 COPY /packages.txt /
 
 COPY install.sh /
+COPY requirements.txt /
+
 RUN apt-get update && ./install.sh
 
 #RUN dpkg --add-architecture i386 && add-apt-repository universe && apt-get update && \
@@ -28,7 +30,7 @@ RUN apt-get update && ./install.sh
 #    -o APT::Immediate-Configure=false $(cat /packages.txt) && \
 #  rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt /
+
 
 #RUN python3 -m pip install -r /requirements.txt --no-cache-dir
 
