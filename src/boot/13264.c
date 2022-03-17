@@ -276,7 +276,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800288EC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028930);
 
-void nullsub_6(void) {
+void func_80028964(void) {
 }
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002896C);
@@ -353,13 +353,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800291D4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029200);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", setusershell);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002922C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029250);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002929C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", setusershell_0);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002937C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800293A0);
 
@@ -415,7 +415,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029C8C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029D70);
 
-void nullsub_7(void) {
+void func_80029DB8(void) {
 }
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029DC0);

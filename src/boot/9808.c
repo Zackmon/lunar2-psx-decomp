@@ -48,8 +48,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/9808", func_80019BE4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/9808", func_80019C68);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/9808", def_80019E10);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/9808", func_80019E68);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/9808", func_80019F0C);

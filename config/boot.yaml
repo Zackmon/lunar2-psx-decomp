@@ -16,7 +16,7 @@ options:
   find_file_boundaries: yes
   enable_ld_alignment_hack: yes
   use_legacy_include_asm: no
-  gp_value: 0x8009a6d0
+  gp_value: 0
 segments:
   - [0x0, header]    # data?
   - [0x84, bin]      # zero padding
@@ -26,13 +26,13 @@ segments:
     vram:  0x80010000    # per header
     subalign: 4
     subsegments:
-      - [0x800, data]     # data?
-      - [0x333C, c]       # first function
-      - [0x9590, c]       # GsGetWorkBase
-      - [0x95BC, c]       # Continue Game functions
-      - [0x9808, c]       # Main Function
-      - [0xAC94, c]       # GsGetWorkBase_0
-      - [0xACA4, c]       # Continue Game functions
+      - [0x800, bin]     # data
+      - [0x333C,c]       # first function
+      - [0x9590,c]       # GsGetWorkBase
+      - [0x95BC,c]       # Continue Game functions
+      - [0x9808,c]       # Main Function
+      - [0xAC94,c]       # GsGetWorkBase_0
+      - [0xACA4,c]       # Continue Game functions
       - [0x1320C, c]       # InitCard
       - [0x13264, c]       # Continue Game functions
       - [0x1B260, c]       # DsFlush
@@ -42,4 +42,4 @@ segments:
       - [0x57214, c]       # Another set of library functions
       - [0x6DD84, c]       # Continue Game functions/Objects
       - [0x6FC1C, bin]    #data
-  - [0x7BFFF]
+  - [0x7C000]

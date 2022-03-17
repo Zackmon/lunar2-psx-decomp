@@ -74,8 +74,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BFD8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C058);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001C094);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C110);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C128);
@@ -168,21 +166,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001E694);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001E750);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001E7B0);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001E89C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001E8F8);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001E9FC);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001EA84);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001EAEC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001EB84);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001EBE0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001EC74);
 
@@ -200,13 +190,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F3A4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F428);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001F484);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F578);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F628);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8001F684);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F73C);
 
@@ -270,17 +256,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020920);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800209D0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_80020A70);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020B2C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020DE0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_80020E78);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020F60);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_80021004);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80021124);
 
@@ -294,8 +274,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800211C4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800213BC);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_8002143C);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800215F4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002192C);
@@ -303,8 +281,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002192C);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002194C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002196C);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", def_80021A24);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80021D1C);
 

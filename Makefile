@@ -113,7 +113,7 @@ dirs:
 check: $(BOOT_BASENAME).ok
 verify: $(BOOT_TARGET).ok
 
-extract: $(BOOT_BASENAME).yaml
+extract: config/$(BOOT_BASENAME).yaml
 	$(SPLAT) $<
 
 clean:
@@ -121,8 +121,8 @@ clean:
 
 very-clean: clean
 	rm -rf $(BOOT_ASM_DIR) $(BOOT_ASSETS_DIR)
-	rm -rf *auto*.txt
-	rm -rf *.ld
+	rm -rf config/*auto*.txt
+	rm -rf config/*.ld
 
 
 $(BOOT_TARGET).dat: $(BOOT_TARGET).elf

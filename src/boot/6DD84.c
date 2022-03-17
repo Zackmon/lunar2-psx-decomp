@@ -6,49 +6,49 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007D5B4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007D61C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padInitSioMode);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007D7AC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007DAE0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padSioRW);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007DBD0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padSioRW2);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007DDF4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padClrIntSio0);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E070);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padWaitRXready);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E100);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padSetCmd);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E128);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padSendAtLoadInfo);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E138);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padRecvAtLoadInfo);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E1BC);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padGetActSize);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E42C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padLoadActInfo);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E464);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E538);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E5E0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padCmdParaMode);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E9D8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", PDRESRES_OBJ_1444);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007E9F8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", PDRESRES_OBJ_1458);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EA0C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", PDRESRES_OBJ_1478);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EA2C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", PDRESRES_OBJ_1498);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EA4C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", PDRESRES_OBJ_14B8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EA6C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padSetRC2wait);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EA80);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", _padChkRC2wait);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EAA0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", unknown_libname_1);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EB40);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/6DD84", func_8007EB88);
 

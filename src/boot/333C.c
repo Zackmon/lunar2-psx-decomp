@@ -16,7 +16,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80013158);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800131E4);
 
-void nullsub_1(void) {
+void func_800132EC(void) {
 }
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800132F4);
@@ -127,8 +127,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016600);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016710);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", def_80016804);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
@@ -176,8 +174,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800176C8);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017728);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800177C8);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", def_80017854);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017C90);
 
