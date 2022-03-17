@@ -1,4 +1,3 @@
-InitCARD = 0x80022A0C;
 aBaslus01071lun = 0x80085A04;
 aBvFz = 0x80085C3C;
 aQqqjkkpppooonm = 0x80085C6C;

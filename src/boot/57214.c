@@ -12,10 +12,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_80066B84);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", SetDefDrawEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", SetDefDrawEnv);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", SetDefDispEnv);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", SetDefDispEnv);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", GetTPage);
@@ -92,13 +88,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", def_80067FD0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_sync);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_sync);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_ready);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_ready);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_cw);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_cw);
 
@@ -108,35 +98,21 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_80068C2C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_flush);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_flush);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_initvol);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_initvol);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_initintr);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_80068E78);
 
-void CD_init(void) {
-}
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_init);
 
-void CD_datasync(void) {
-}
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_datasync);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_getsector);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_8006920C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_80069218);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", puts);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CD_getsector2);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", CdIntToPos);
 
@@ -498,8 +474,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", _SsVmKeyOn);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", _SsVmKeyOff);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", _SsVmKeyOff);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_800715D0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", _SsVmSeKeyOn);
@@ -730,7 +704,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", func_80078D94);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", _bu_init);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", InitCARD);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", InitCARD_0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/57214", StartCARD);
 

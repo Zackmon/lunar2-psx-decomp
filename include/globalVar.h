@@ -46,7 +46,7 @@ u_short word_8009B168;
 void FUN_80016A94();
 u_char byte_8009B163;
 
-uint ReadFileFromDisk_80015FC0(char * file, u_long * addr, uint nbyte);
+u_int ReadFileFromDisk_80015FC0(char * file, u_long * addr, u_int nbyte);
 
 int FUN_80015FF4(void (*a1)(void));
 u_long dword_800BA000;
@@ -56,6 +56,7 @@ int dword_8009B158;
 u_short word_8009B15E;
 int dword_8009B180;
 CdlLOC stru_8008B18D;
+u_short word_8009B15C;
 
 
 int FUN_800161F4();

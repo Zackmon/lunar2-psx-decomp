@@ -1,4 +1,5 @@
-#include "../../include/common.h"
+#include "common.h"
+#include "globalVar.h"
 /*
 INCLUDE_ASM("config/../asm/boot/nonmatchings/9008", func_80018808);
 
@@ -2325,7 +2326,7 @@ void FUN_80016A94()
 {
     byte_8009B163 = 1;
 }
-uint ReadFileFromDisk_80015FC0(char * file, u_long * address, uint numberOfByte){
+u_int ReadFileFromDisk_80015FC0(char * file, u_long * address, u_int numberOfByte){
     int numberOfReadBytes = CdReadFile(file,address,numberOfByte);
 
     if (numberOfReadBytes != 0){
@@ -2348,13 +2349,19 @@ int FUN_80015FF4(void (*a1)(void)){
 
         if (fileFromDisk){
             do {
-                VSync(0);
+                if (a1)
+                    a1();
+                else
+                    VSync(0);
+
                 sync = CdReadSync(1,&dword_8008B188);
             }while (sync >0);
+
+            if (sync>=0){
+                break;
+            }
         }
-        if (sync>=0){
-            break;
-        }
+
 
         if (++word_8009B168 >=5u){
             LABEL_16:
@@ -2364,7 +2371,7 @@ int FUN_80015FF4(void (*a1)(void)){
     }
 
     memcpy(&byte_801F0F00,&dword_800BA000,fileFromDisk);
-    u_short word_8009B15C = fileFromDisk;
+    word_8009B15C = fileFromDisk;
 
     dword_8009B158 = (int) &byte_801F0F00;
     word_8009B15E = word_8009B15C / 5;
@@ -2385,6 +2392,7 @@ int FUN_80015FF4(void (*a1)(void)){
 }
 
 int FUN_800161F4(){
+    int v0;
     u_char v2[8];
 
     byte_8009B160 = 0;
@@ -2394,7 +2402,7 @@ int FUN_800161F4(){
     CdControlB('\x0e',v2,&dword_8008B188);
     VSync(3);
 
-    int v0 = FUN_80015FF4(0);
+    v0 = FUN_80015FF4(0);
 
     if (v0 == 0){
         return 0;

@@ -1,6 +1,6 @@
 options:
   platform:     psx
-  basename:     SLUS_010.71
+  basename:     boot
   base_path:    .
   target_path:  ../SLUS_010/SLUS_010.71
   asm_path:     ../asm/boot
@@ -9,13 +9,13 @@ options:
   # compiler
   compiler: GCC
   # disasm/linker
-  symbol_addrs_path:    symbol_addrs.SLUS_010.txt
-  undefined_syms_path:  undefined_syms.SLUS_010.txt
-  undefined_funcs_auto_path:  undefined_funcs_auto.SLUS_010.txt
-  undefined_syms_auto_path:   undefined_syms_auto.SLUS_010.txt
-  find_file_boundaries: True
-  enable_ld_alignment_hack: True
-  use_legacy_include_asm: False
+  symbol_addrs_path:    symbol_addrs.boot.txt
+  undefined_syms_path:  undefined_syms.boot.txt
+  undefined_funcs_auto_path:  undefined_funcs_auto.boot.txt
+  undefined_syms_auto_path:   undefined_syms_auto.boot.txt
+  find_file_boundaries: yes
+  enable_ld_alignment_hack: yes
+  use_legacy_include_asm: no
   gp_value: 0x8009a6d0
 segments:
   - [0x0, header]    # data?
@@ -42,5 +42,4 @@ segments:
       - [0x57214, c]       # Another set of library functions
       - [0x6DD84, c]       # Continue Game functions/Objects
       - [0x6FC1C, bin]    #data
-  #- [0x53600, bin, trailer] # 0 to end
   - [0x7BFFF]

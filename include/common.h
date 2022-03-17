@@ -5,14 +5,15 @@
 #ifndef LUNAR2ISO_COMMON_H
 #define LUNAR2ISO_COMMON_H
 
-#include "psyq/MEMORY.H"
-#include "psyq/SYS/TYPES.H"
-#include "psyq/LIBETC.H"
-#include "psyq/LIBPAD.H"
-#include "psyq/LIBAPI.H"
-#include "psyq/LIBSPU.H"
-#include "psyq/LIBSND.H"
-#include "psyq/LIBCD.H"
-#include "globalVar.h"
+#include "psyq/memory.h"
+#include "psyq/sys/types.h"
+#include "psyq/libetc.h"
+#include "psyq/libpad.h"
+#include "psyq/libapi.h"
+#include "psyq/libspu.h"
+#include "psyq/libsnd.h"
+#include "psyq/libcd.h"
+#include "include_asm.h"
+
 
 #endif //LUNAR2ISO_COMMON_H

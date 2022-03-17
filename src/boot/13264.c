@@ -2,10 +2,6 @@
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80022A64);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", StartCARD);
-
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", StopCARD);
-
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80022B5C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80022C84);

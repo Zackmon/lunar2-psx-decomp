@@ -78,8 +78,8 @@ endif
 CC_FLAGS        := -G0 -Wall -fno-builtin
 OPT_FLAGS       := -O2
 
-BOOT_LD_FLAGS   := -Map $(BOOT_TARGET).map -T $(BOOT_BASENAME).ld \
-                   -T undefined_syms_auto.$(BOOT_BASENAME).txt -T undefined_funcs_auto.$(BOOT_BASENAME).txt -T undefined_syms.$(BOOT_BASENAME).txt \
+BOOT_LD_FLAGS   := -Map $(BOOT_TARGET).map -T config/$(BOOT_BASENAME).ld \
+                   -T config/undefined_syms_auto.$(BOOT_BASENAME).txt -T config/undefined_funcs_auto.$(BOOT_BASENAME).txt -T config/undefined_syms.$(BOOT_BASENAME).txt \
 				   --no-check-sections
 
 OBJCOPY_FLAGS   := -O binary
