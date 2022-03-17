@@ -47,12 +47,12 @@ OBJCOPY         := $(CROSS)objcopy
 #CC_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/CC1PSX.EXE -quiet
 #CC_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/CC1PSX.EXE -quiet
 #CC_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/CC1PSX.EXE -quiet
-CC_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/CC1PSX.EXE -quiet
+CC_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.4/CC1PSX.EXE -quiet
 
 #AS_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/ASPSX.EXE -quiet
 #AS_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/ASPSX.EXE -quiet
 #AS_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/ASPSX.EXE -quiet
-AS_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/ASPSX.EXE -quiet
+AS_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.4/ASPSX.EXE -quiet
 
 
 PSYQ2ELF        := $(TOOLS_DIR)/psyq/psyq-obj-parser

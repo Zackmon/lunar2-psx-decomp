@@ -275,3 +275,12 @@ _SsVmPitchBend = 0x80072a40;
 SsVabClose = 0x80073964;
 note2pitch2 = 0x80071b80;
 SsSetSerialAttr = 0x8006e214;
+
+
+
+InitCARD = 0x80022A0C;
+DsFlush = 0x8002AA60;
+GsGetWorkBase_0 = 0x8001A494;
+GsGetWorkBase = 0x80018D90;
+
+

@@ -31,11 +31,11 @@ segments:
       - [0x9590,c]       # GsGetWorkBase
       - [0x95BC,c]       # Continue Game functions
       - [0x9808,c]       # Main Function
-      - [0xAC94,c]       # GsGetWorkBase_0
+      - [0xAC94,asm]       # GsGetWorkBase_0
       - [0xACA4,c]       # Continue Game functions
-      - [0x1320C, c]       # InitCard
+      - [0x1320C, asm]       # InitCard
       - [0x13264, c]       # Continue Game functions
-      - [0x1B260, c]       # DsFlush
+      - [0x1B260, asm]       # DsFlush
       - [0x1B290, c]       # Continue Game functions
       - [0x51D88, c]       # Start Function
       - [0x51E44, c]       # start of library funnctions
