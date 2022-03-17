@@ -1,6 +1,9 @@
 iso/*
 SLUS_010/*
 asm/*
+assets/*
+build/*
+config/boot.ld
 
 ### C++ template
 # Prerequisites
