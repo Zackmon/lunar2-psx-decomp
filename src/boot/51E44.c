@@ -94,7 +94,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063E90);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063EF8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064014);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ClearImage);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800640A4);
 

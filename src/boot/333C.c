@@ -103,7 +103,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015E50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015F60);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015FC0);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015FF4);
 
@@ -153,7 +153,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001706C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800172AC);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017300);
 

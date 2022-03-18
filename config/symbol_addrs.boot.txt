@@ -16,7 +16,7 @@ _spu_Fr = 0x80074a7c;
 _spu_Fr_ = 0x800746d0;
 _SsContRpn1 = 0x8006c8d4;
 SsSepStop = 0x8006f6ec;
-stup0 = 0x80061628;
+
 funcEvSpIOE = 0x8007b2e4;
 funcEvSpErrorx = 0x8007b348;
 _SsContPanpot = 0x8006c394;
@@ -29,7 +29,7 @@ _SsContDamper = 0x8006c554;
 _spu_FsetPCR = 0x80074c04;
 funcEvSpNewcardx = 0x8007b370;
 _SsSetNrpnVabAttr13 = 0x8006d464;
-stup1 = 0x800615ac;
+ReadFileFromDisk_80015FC0 = 0x80015FC0;
 _SsSetNrpnVabAttr7 = 0x8006d004;
 _spu_FiDMA = 0x80074614;
 _SsSetControlChange = 0x8006d744;
@@ -275,12 +275,14 @@ _SsVmPitchBend = 0x80072a40;
 SsVabClose = 0x80073964;
 note2pitch2 = 0x80071b80;
 SsSetSerialAttr = 0x8006e214;
-
+ClearImage = 0x80064014;
 
 
 InitCARD = 0x80022A0C;
 DsFlush = 0x8002AA60;
 GsGetWorkBase_0 = 0x8001A494;
 GsGetWorkBase = 0x80018D90;
+TerminateSPUCall_80018FE8 = 0x80018FE8;
+TerminateSPU_800172AC = 0x800172AC;
 
 

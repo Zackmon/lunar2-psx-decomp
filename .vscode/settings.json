@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "globalvar.h": "c",
+        "common.h": "c",
+        "memory.h": "c",
+        "types.h": "c",
+        "libpad.h": "c",
+        "libapi.h": "c",
+        "libsnd.h": "c",
+        "libcd.h": "c",
+        "libspu.h": "c",
+        "kernel.h": "c",
+        "include_asm.h": "c"
+    }
+}
