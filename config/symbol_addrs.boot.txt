@@ -335,3 +335,154 @@ StoreImage2 = 0x80066698;
 MoveImage2 = 0x80066784;
 DrawOTag2 = 0x800668c8;
 _GPU_ResetCallback = 0x800669c4;
+
+SetSemiTrans = 0x80066DF4;
+SetShadeTex = 0x80066E24;
+SetPolyFT4 = 0x80066E54;
+SetPolyG4 = 0x80066E74;
+SetSprt8 = 0x80066E94;
+SetTile = 0x80066EB4;
+InitGeom = 0x80066fac;
+ExitCriticalSection = 0x80067124;
+
+
+CD_sync = 0x800682d8;
+CD_ready = 0x80068558
+CD_cw = 0x80068820;
+CD_vol = 0x80068c2c;
+CD_flush = 0x80068cb4;
+CD_initvol = 0x80068d88;
+CD_initintr = 0x80068e78;
+CD_init = 0x80068ec4;
+CD_set_test_parmnum = 0x8006920c;
+
+CdIntToPos = 0x80069354;
+CdControl = 0x800694a4;
+CdControlF = 0x800695e0;
+CdControlB = 0x80069714;
+CdReadBreak = 0x80069dc4;
+CdRead = 0x80069f64;
+CdReadSync = 0x8006a100;
+
+CdLastPos = 0x8006A224;
+PadChkVsync = 0x8006A234;
+PadStartCom = 0x8006A254;
+PadStopCom = 0x8006A274;
+PadChkMtap = 0x8006A294;
+
+CdGetSector = 0x8006a2b4;
+CD_getsector = 0x8006a2d4;
+CD_getsector2 = 0x8006a3f4;
+
+CdDiskReady = 0x8006a534;
+CdReadFile = 0x8006a674;
+
+SetVideoMode = 0x8006B674;
+GetVideoMode = 0x8006B688;
+SsInit = 0x8006bb84;
+SsInitHot = 0x8006BBC4;
+SsIsEos = 0x8006bbf4;
+_SsSetNrpnVabAttr15 = 0x8006D5A4;
+_SsSetNrpnVabAttr17 = 0x8006D604;
+
+SsSeqPlay = 0x8006e094;
+SsQuit = 0x8006E0D4;
+
+_SsSndSetVol = 0x8006fba4;
+SsSeqSetVol = 0x8006fc34;
+SsSeqGetVol = 0x8006fd34;
+
+SsUtSetReverbType = 0x80070424;
+
+
+SsUtReverbOff = 0x80070504;
+SsUtReverbOn = 0x80070524;
+_SsVmDamperOff = 0x80070714;
+_SsVmDamperOn = 0x80070724;
+_SsVmFlush = 0x80070734;
+
+_SsVmKeyOn = 0x80070f54;
+_SsVmKeyOff = 0x80071470;
+_SsVmSeKeyOn = 0x800715d0;
+_SsVmSeKeyOff = 0x800716bc;
+
+_SsVmSetProgVol = 0x80072b24;
+_SsVmSetSeqVol = 0x80072b94;
+_SsVmGetSeqVol = 0x80073100;
+_SsVmSeqKeyOff = 0x80073164;
+
+SsSetMono = 0x80073944;
+SsSetStereo = 0x80073954;
+
+SpuInit = 0x80074034;
+
+_SpuDataCallback = 0x80074D14;
+SpuInitHot = 0x80074D44;
+SpuQuit = 0x80074D64;
+
+SpuSetNoiseVoice = 0x800751E4;
+SpuGetNoiseVoice = 0x800754D4;
+
+SpuSetReverb = 0x80075584;
+
+SpuSetReverbVoice = 0x800761B4;
+SpuGetReverbVoice = 0x800761E4;
+
+_spu_setInTransfer = 0x80076764;
+_spu_getInTransfer = 0x8007678C;
+
+InitMemoryCard_80078D64 = 0x80078D64;
+MemCardEnd = 0x80078D94;
+
+
+InitCARD_0 = 0x80078dc4;
+StartCARD = 0x80078e54;
+StopCARD = 0x80078e9c;
+SetInitPadFlag = 0x80078ec4;
+ReadInitPadFlag = 0x80078ed0;
+PAD_init = 0x80078ee0;
+InitPAD = 0x80078f70;
+StartPAD = 0x80079000;
+StopPAD = 0x80079030;
+
+_patch_card_info = 0x800792e4;
+
+
+PushCallbackFunc = 0x80079584;
+PullCallbackFunc = 0x800795ac;
+McrdGetGlobalStructure = 0x800795d4;
+MemCardStart = 0x800795e0;
+MemCardStop = 0x80079650;
+MemCardExist = 0x80079690;
+
+MemCardAccept = 0x80079A14;
+MemCardOpen = 0x80079D24;
+MemCardClose = 0x80079EAC;
+MemCardReadData = 0x80079EF0;
+
+MemCardWriteData = 0x8007a158;
+
+MemCardReadFile = 0x8007a3bc;
+
+
+MemCardWriteFile = 0x8007A5DC;
+MemCardGetDirentry = 0x8007A7FC;
+MemCardCallback = 0x8007AA58;
+MemCardSync = 0x8007AA6C;
+MemCardCreateFile = 0x8007AB88;
+MemCardFormat = 0x8007AC84;
+
+_card_format2 = 0x8007b994;
+_card_create2 = 0x8007bd64;
+
+PadSetAct = 0x8007c4d4;
+PadSetActAlign = 0x8007c514;
+
+PadSetMainMode = 0x8007c684;
+PadGetState = 0x8007c7e4;
+PadInfoMode = 0x8007c8b4;
+PadStartCom_0 = 0x8007c9b4;
+PadStopCom_0 = 0x8007ca80;
+PadInitDirect = 0x8007cac4;
+_padInitDirPort = 0x8007cb74;
+_dirFailAuto = 0x8007d4a4;
