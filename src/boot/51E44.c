@@ -4,7 +4,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", InitHeap);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", Exec);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80061664);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", EnterCriticalSection);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", Krom2RawAdd);
 
@@ -22,25 +22,25 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", memchr);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", memmove);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80062074);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", strlen);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800620B4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTReset);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800620E8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTGetEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80062174);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTPutEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006220C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTin);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80062288);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTout);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800622A8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTinSync);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800622E4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCToutSync);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006232C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCTinCallback);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80062350);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DecDCToutCallback);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80062374);
 
@@ -68,67 +68,67 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", putchar);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", write);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063094);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetDumpFnt);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800630D4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", FntLoad);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063174);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", FntOpen);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063430);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", FntFlush);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006374C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", FntPrint);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063B14);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ResetGraph);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063C88);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetGraphDebug);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063CE4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetGraphQueue);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063D88);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", GetGraphDebug);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063D98);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawSyncCallback);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063DF8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetDispMask);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063E90);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawSync);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80063EF8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ClearImage);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800640A4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ClearImage2);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006413C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", LoadImage);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006419C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", StoreImage);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800641FC);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", MoveImage);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800642B4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ClearOTag);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006437C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", ClearOTagR);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064428);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawPrim);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064484);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawOTag);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800644F4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", PutDrawEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800645B4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawOTagEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006468C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", GetDrawEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800646C0);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", PutDispEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064BB8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", GetDispEnv);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064BEC);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", GetODE);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064C1C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetDrawArea);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064C9C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetDrawOffset);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064CDC);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", SetDrawEnv);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80064ED4);
 
@@ -179,14 +179,14 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800663C8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_8006650C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800665AC);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", LoadImage2);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80066698);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", StoreImage2);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_80066784);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", MoveImage2);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800668C8);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", DrawOTag2);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800669C4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", _GPU_ResetCallback);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/51E44", func_800669EC);

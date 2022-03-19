@@ -28,7 +28,7 @@ segments:
     subsegments:
       - [0x800, bin]     # data
       - [0x333C,c]       # first function
-      - [0x9590,c]       # GsGetWorkBase
+      - [0x9590,asm]       # GsGetWorkBase
       - [0x95BC,c]       # Continue Game functions
       - [0x9808,c]       # Main Function
       - [0xAC94,asm]       # GsGetWorkBase_0

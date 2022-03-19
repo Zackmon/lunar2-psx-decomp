@@ -275,7 +275,7 @@ _SsVmPitchBend = 0x80072a40;
 SsVabClose = 0x80073964;
 note2pitch2 = 0x80071b80;
 SsSetSerialAttr = 0x8006e214;
-ClearImage = 0x80064014;
+
 
 
 InitCARD = 0x80022A0C;
@@ -285,4 +285,53 @@ GsGetWorkBase = 0x80018D90;
 TerminateSPUCall_80018FE8 = 0x80018FE8;
 TerminateSPU_800172AC = 0x800172AC;
 
+EnterCriticalSection = 0x80061664;
+strlen = 0x80062074;
+DecDCTReset = 0x800620B4;
+DecDCTGetEnv = 0x800620E8;
+DecDCTPutEnv = 0x80062174;
+DecDCTin = 0x8006220C;
+DecDCTout = 0x80062288;
+DecDCTinSync = 0x800622A8;
+DecDCToutSync = 0x800622E4;
+DecDCTinCallback = 0x8006232C;
+DecDCToutCallback = 0x80062350;
 
+SetDumpFnt = 0x80063094;
+FntLoad = 0x800630D4;
+FntOpen = 0x80063174;
+FntFlush = 0x80063430;
+FntPrint = 0x8006374C;
+ResetGraph = 0x80063B14;
+SetGraphDebug = 0x80063C88;
+SetGraphQueue = 0x80063ce4;
+GetGraphDebug = 0x80063d88;
+DrawSyncCallback = 0x80063d98;
+SetDispMask = 0x80063df8;
+DrawSync = 0x80063e90;
+
+ClearImage = 0x80064014;
+ClearImage2 = 0x800640A4;
+LoadImage = 0x8006413c;
+StoreImage = 0x8006419c;
+MoveImage = 0x800641fc;
+ClearOTag = 0x800642b4;
+ClearOTagR = 0x8006437c;
+DrawPrim = 0x80064428;
+DrawOTag = 0x80064484;
+PutDrawEnv = 0x800644f4;
+DrawOTagEnv = 0x800645b4;
+GetDrawEnv = 0x8006468c;
+PutDispEnv = 0x800646c0;
+
+GetDispEnv = 0x80064bb8;
+GetODE = 0x80064bec;
+SetDrawArea = 0x80064c1c;
+SetDrawOffset = 0x80064c9c;
+SetDrawEnv = 0x80064cdc;
+
+LoadImage2 = 0x800665ac;
+StoreImage2 = 0x80066698;
+MoveImage2 = 0x80066784;
+DrawOTag2 = 0x800668c8;
+_GPU_ResetCallback = 0x800669c4;
