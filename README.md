@@ -53,7 +53,7 @@ Once you have an :ok: build, copy it into the `expected/` folder so `asm-differ`
 cp -r build/ expected/
 ```
 
-#References
+# References
 The project structure and tools have been influenced by the following repos , without using them as a reference I would've not been able to start this project
 
 https://github.com/mkst/ctr
