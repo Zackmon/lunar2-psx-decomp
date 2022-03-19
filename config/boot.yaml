@@ -26,20 +26,25 @@ segments:
     vram:  0x80010000    # per header
     subalign: 4
     subsegments:
-      - [0x800, bin]     # data
-      - [0x333C,c]       # first function
+      - [0x800, bin]       # data
+      - [0x333C,c]         # first function
       - [0x9590,asm]       # GsGetWorkBase
-      - [0x95BC,c]       # Continue Game functions
-      - [0x9808,c]       # Main Function
+      - [0x95BC,c]         # Continue Game functions
+      - [0x9808,c]         # Main Function
       - [0xAC94,asm]       # GsGetWorkBase_0
-      - [0xACA4,c]       # Continue Game functions
-      - [0x1320C, asm]       # InitCard
+      - [0xACA4,c]         # Continue Game functions
+      - [0x1320C, asm]     # InitCard
       - [0x13264, c]       # Continue Game functions
-      - [0x1B260, asm]       # DsFlush
+      - [0x1B260, asm]     # DsFlush
       - [0x1B290, c]       # Continue Game functions
-      - [0x51D88, asm]       # Start Function
+      - [0x51D88, asm]     # Start Function
       - [0x51E44, c]       # start of library funnctions
-      - [0x57214, c]       # Another set of library functions
-      - [0x6DD84, c]       # Continue Game functions/Objects
-      - [0x6FC1C, bin]    #data
+      - [0x57214, asm]     # Another set of library functions
+      - [0x59C64, c]       # 2 functions
+      - [0x59CA4, asm]     # Another set of library functions
+      - [0x5AA04, c]       # 2 functions
+      - [0x5AA24, asm]     # Another set of library functions
+      - [0x69564, c]       # InitMemoryCard_80078D64
+      - [0x69594, asm]     # Another set of library functions
+      - [0x6FC1C, bin]     #data
   - [0x7C000]
