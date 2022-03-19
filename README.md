@@ -15,7 +15,7 @@ Please check the [packages.txt](packages.txt) and [requirements.txt](requirement
 Clone the repository; note the `--recursive` flag to fetch submodules at the same time:
 
 ```sh
-git clonegit@github.com:Zackmon/lunar2-psx-decomp.git --recursive
+git clone git@github.com:Zackmon/lunar2-psx-decomp.git --recursive
 ```
 
 Navigate into the freshly cloned repo
