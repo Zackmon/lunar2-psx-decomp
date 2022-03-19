@@ -1,8 +1,0 @@
-.set noat      # allow manual use of $at
-.set noreorder # don't insert nops after branches
-
-
-glabel func_80014B2C
-/* 532C 80014B2C 0C0084AF */  sw         $a0, %gp_rel(D_C+0x0)($gp)
-/* 5330 80014B30 0800E003 */  jr         $ra
-/* 5334 80014B34 00000000 */   nop
