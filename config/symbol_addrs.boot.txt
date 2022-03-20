@@ -502,3 +502,5 @@ _padLoadActInfo = 0x8007e464;
 _padCmdParaMode = 0x8007e9d8;
 _padSetRC2wait = 0x8007ea80;
 _padChkRC2wait = 0x8007eaa0;
+
+CallCdSync_80069484 = 0x80069484;
