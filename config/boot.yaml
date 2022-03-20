@@ -38,11 +38,9 @@ segments:
       - [0x1B260, asm]     # DsFlush
       - [0x1B290, c]       # Continue Game functions
       - [0x51D88, asm]     # Start Function
-      - [0x51E44, asm]       # start of library funnctions
+      - [0x51E44, asm]     # start of library funnctions
       - [0x59C64, c]       # 2 functions
       - [0x59CA4, asm]     # Another set of library functions
-      - [0x5AA04, c]       # 2 functions
-      - [0x5AA24, asm]     # Another set of library functions
       - [0x69564, c]       # InitMemoryCard_80078D64
       - [0x69594, asm]     # Another set of library functions
       - [0x6FC1C, bin]     #data
