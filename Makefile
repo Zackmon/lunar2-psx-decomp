@@ -94,7 +94,7 @@ OBJCOPY_FLAGS   := -O binary
 # $(BUILD_DIR)/src/bootloader/1E4AC.c.o: AS_FLAGS :=
 # $(BUILD_DIR)/src/bootloader/1E4AC.c.o: CPP_FLAGS += -DINCLUDE_ASM
 
-##$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_46)
+$(BUILD_DIR)/src/boot/95BC.c.o: CC := $(CC_PSYQ_46)
 
 # psyq + objconverter
 ##$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_46)
