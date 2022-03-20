@@ -57,7 +57,7 @@ AS_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/ASPSX.EXE -quiet
 
 PSYQ2ELF        := $(TOOLS_DIR)/psyq/psyq-obj-parser
 
-CC              := $(CC_PSYQ_46)
+CC              := ./tools/gcc-2.6.3/cc1 ##$(CC_PSYQ_46)
 
 SPLAT           := $(PYTHON) $(TOOLS_DIR)/splat/split.py
 

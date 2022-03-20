@@ -7,3 +7,6 @@
 [submodule "tools/m2ctx"]
 	path = tools/m2ctx
 	url = https://github.com/ethteck/m2ctx.git
+[submodule "tools/decomp-permuter"]
+	path = tools/decomp-permuter
+	url = https://github.com/simonlindholm/decomp-permuter.git
