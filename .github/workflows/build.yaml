@@ -28,5 +28,7 @@ jobs:
         args: make extract
     - name: Perform make
       uses: docker://ghcr.io/zackmon/lunar2-psx-decomp:latest
+      env:
+        WINEPREFIX: /ctr/.wine
       with:
         args: make
