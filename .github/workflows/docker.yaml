@@ -2,6 +2,11 @@ name: Create and push Docker build image
 on:
   push:
     branches: [ master ]
+    paths:
+      - Dockerfile
+      - install.sh
+      - packages.txt
+      - requirements.txt
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}

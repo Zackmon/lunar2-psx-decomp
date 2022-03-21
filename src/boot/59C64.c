@@ -5,6 +5,7 @@ extern int CD_sync( int mode, unsigned char *result);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/59C64", func_80069464);
 
+// functionality is correct but assembly is not matching
 /* int func_80069464(int arg0) {
     
     int var1;
