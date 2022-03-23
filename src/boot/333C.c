@@ -103,7 +103,19 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015E50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015F60);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
+u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfByte) {
+    int numberOfReadBytes;
+    u_int result;
+    numberOfReadBytes = CdReadFile(fileName,address,numberOfByte);
+
+    result = 0;
+
+    if (numberOfReadBytes == 0){
+        return result;
+    }
+    return numberOfByte;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015FF4);
 
