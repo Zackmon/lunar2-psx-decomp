@@ -117,11 +117,11 @@ u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfB
     return numberOfByte;
 }
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015FF4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetFilePositionFromCD_80015ff4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001618C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800161F4);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016280);
 

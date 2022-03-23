@@ -506,4 +506,4 @@ _padChkRC2wait = 0x8007eaa0;
 CallCdSync_80069484 = 0x80069484;
 
 InitCDAndLoadFiles_800161f4 = 0x800161F4;
-GetFilePositionFromCD = 0x80015FF4;
+GetFilePositionFromCD_80015ff4 = 0x80015FF4;
