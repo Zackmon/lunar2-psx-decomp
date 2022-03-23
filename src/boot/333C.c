@@ -1,4 +1,5 @@
 #include "common.h"
+char D_8009B163;
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012B3C);
 
@@ -143,7 +144,10 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
+void func_80016A94(void) {
+    D_8009B163 = 1;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AA4);
 
