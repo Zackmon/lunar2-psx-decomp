@@ -141,8 +141,16 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016710);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
-
+#else
+short D_8009B166;
+short D_8009B168;
+void func_80016A84(void) {
+    D_8009B166 = 0;
+    D_8009B168 = 0
+}
+#endif
 
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
