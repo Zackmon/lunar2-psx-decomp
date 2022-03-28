@@ -147,6 +147,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
 #else
+char D_8009B163;
 void func_80016A94() {
     D_8009B163 = 1;
 }
@@ -168,17 +169,62 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BE8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
+#else
+int IsSPUInitilized;
+char SsTable;
+void InitSPU_8001706C(void) {
+    SpuReverbAttr spuReverbAttr;
+
+    IsSPUInitilized = 0;
+    SsInitHot();
+
+    SsSetMVol(0,0);
+
+    SsSetTableSize (&SsTable, 16,1);
+
+    SsSetTickMode(1);
+
+    func_8001718C();
+
+    spuReverbAttr.mask = 7;
+    spuReverbAttr.mode = 260;
+    spuReverbAttr.depth.left = 0x3FFF;
+    spuReverbAttr.depth.right = 0x3FFF;
+
+    SpuSetReverbModeParam(&spuReverbAttr);
+
+    SpuSetReverbDepth(&spuReverbAttr);
+
+    SpuSetReverb(1);
+
+    func_800175DC(1,2,1145,0);
+    func_800175DC(2,1,0,0);
+    func_800175DC(3,0,6,0);
+    func_80017FE4(5,0);
+
+    do
+        func_800174E8();
+    while (func_80017520() >0);
+
+    SsStart2();
+    SsSetSerialAttr(0,0,1);
+    SsSetSerialVol (0,127,127);
+    SsSetMVol (127,127);
+
+    IsSPUInitilized = 1;
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
 #else
-int D_8009B204;
 void TerminateSPU_800172AC(void) {
     SpuReverbAttr v0;
-    D_8009B204 = 0;
+    IsSPUInitilized = 0;
     SsSetMVol(0,0);
     SsEnd();
     v0.mask = 1;

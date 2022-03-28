@@ -509,3 +509,7 @@ InitCDAndLoadFiles_800161f4 = 0x800161F4;
 GetFilePositionFromCD_80015ff4 = 0x80015FF4;
 
 InitSPU_8001706C = 0x8001706C;
+
+IsSPUInitilized = 0x8009B204;
+
+SsTable = 0x800AA698;
