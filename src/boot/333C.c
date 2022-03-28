@@ -1,5 +1,4 @@
 #include "common.h"
-//extern u_char D_8009B163;
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012B3C);
 
@@ -144,10 +143,14 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
 
+
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
-/*void func_80016A94() {
+#else
+void func_80016A94() {
     D_8009B163 = 1;
-}*/
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AA4);
 
@@ -165,11 +168,26 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BE8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001706C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
+#else
+int D_8009B204;
+void TerminateSPU_800172AC(void) {
+    SpuReverbAttr v0;
+    D_8009B204 = 0;
+    SsSetMVol(0,0);
+    SsEnd();
+    v0.mask = 1;
+    v0.mode = 0;
+    SpuSetReverbModeParam(&v0);
+    SpuSetReverb(0);
+    SsQuit();
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017300);
 

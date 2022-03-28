@@ -46,12 +46,12 @@ OBJCOPY         := $(CROSS)objcopy
 
 #CC_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/CC1PSX.EXE -quiet
 #CC_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/CC1PSX.EXE -quiet
-#CC_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/CC1PSX.EXE -quiet
+CC_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/CC1PSX.EXE -quiet
 CC_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/CC1PSX.EXE -quiet
 
 #AS_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/ASPSX.EXE -quiet
 #AS_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/ASPSX.EXE -quiet
-#AS_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/ASPSX.EXE -quiet
+AS_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/ASPSX.EXE -quiet
 AS_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/ASPSX.EXE -quiet
 
 
@@ -95,7 +95,13 @@ OBJCOPY_FLAGS   := -O binary
 # $(BUILD_DIR)/src/bootloader/1E4AC.c.o: CPP_FLAGS += -DINCLUDE_ASM
 
 $(BUILD_DIR)/src/boot/95BC.c.o: CC := $(CC_PSYQ_46)
+
+
 $(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_46)
+#$(BUILD_DIR)/src/boot/333C.c.o: CC_FLAGS := -G0 -Wall -fno-builtin
+#$(BUILD_DIR)/src/boot/333C.c.o: AS := $(AS_PSYQ_43)
+#$(BUILD_DIR)/src/boot/333C.c.o: AS_FLAGS :=
+#$(BUILD_DIR)/src/boot/333C.c.o: CPP_FLAGS += -DINCLUDE_ASM
 
 # psyq + objconverter
 ##$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_46)
