@@ -1,5 +1,7 @@
 #include "common.h"
 
+int IsSPUInitilized;
+
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012B3C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012BA8);
@@ -103,7 +105,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015E50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015F60);
 
+
 //INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
+
 u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfByte) {
     int numberOfReadBytes;
     u_int result;
@@ -141,25 +145,23 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016710);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
-#ifndef NON_EQUIVALENT
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
-#else
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
+
 short D_8009B166;
 short D_8009B168;
 void func_80016A84(void) {
     D_8009B166 = 0;
-    D_8009B168 = 0
+    D_8009B168 = 0;
 }
-#endif
 
-#ifndef NON_EQUIVALENT
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
-#else
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
+
 char D_8009B163;
 void func_80016A94() {
     D_8009B163 = 1;
 }
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AA4);
 
@@ -180,7 +182,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
 #else
-int IsSPUInitilized;
 char SsTable;
 void InitSPU_8001706C(void) {
     SpuReverbAttr spuReverbAttr;
@@ -227,9 +228,8 @@ void InitSPU_8001706C(void) {
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
-#ifndef NON_EQUIVALENT
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
-#else
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
+
 void TerminateSPU_800172AC(void) {
     SpuReverbAttr v0;
     IsSPUInitilized = 0;
@@ -241,7 +241,7 @@ void TerminateSPU_800172AC(void) {
     SpuSetReverb(0);
     SsQuit();
 }
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017300);
 
