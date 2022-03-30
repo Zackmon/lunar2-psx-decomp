@@ -2,6 +2,10 @@
 
 int IsSPUInitilized;
 
+
+void func_80016A84(void);
+void func_80016A94();
+
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012B3C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012BA8);
@@ -125,7 +129,47 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetFilePositionFromCD_80015f
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001618C);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
+#else
+char D_8009B160;
+char D_8009B162;
+char D_8009B161;
+char D_8009B164;
+
+int D_8009B17C;
+
+const char *D_8008B188;
+
+int InitCDAndLoadFiles_800161f4(void) {
+    int v0;
+    u_char v2[8];
+    D_8009B160 = 0;
+
+    CdInit();
+
+    func_80069464(0);
+    v2[0] = 0x80;
+
+    CdControlB(0x0e, v2, &D_8008B188);
+
+    VSync(3);
+    v0 = GetFilePositionFromCD_80015ff4(0);
+
+    if (v0 == 0) {
+        return 0;
+    }
+
+    D_8009B160 = 1;
+    D_8009B162 = 1;
+    D_8009B161 = 1;
+    D_8009B164 = 0;
+    D_8009B17C = func_80016A94;
+
+    return 1;
+
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016280);
 
