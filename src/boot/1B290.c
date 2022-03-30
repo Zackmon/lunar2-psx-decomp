@@ -954,7 +954,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004070C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80040780);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004088C);
+INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", CheckDiskType_8004088C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800409C0);
 

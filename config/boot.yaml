@@ -17,6 +17,11 @@ options:
   enable_ld_alignment_hack: yes
   use_legacy_include_asm: no
   gp_value: 0x8009a6d0
+  section_order:
+  - .rodata
+  - .text
+  - .data
+  - .bss
 segments:
   - [0x0, header]    # data?
   - [0x84, bin]      # zero padding

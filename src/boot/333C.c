@@ -139,7 +139,7 @@ char D_8009B164;
 
 int D_8009B17C;
 
-const char *D_8008B188;
+u_char D_8008B188;
 
 int InitCDAndLoadFiles_800161f4(void) {
     int v0;
