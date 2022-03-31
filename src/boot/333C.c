@@ -139,7 +139,7 @@ char D_8009B164;
 
 int D_8009B17C;
 
-u_char D_8008B188;
+u_char D_8008B188  __attribute__((section(".text"))); //Require PSYQ as "section" is not avaialble in GCC
 
 int InitCDAndLoadFiles_800161f4(void) {
     int v0;
@@ -226,7 +226,8 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
 #else
-char SsTable;
+char __attribute__((section(".scommon"))) SsTable; //Require PSYQ as "section" is not avaialble in GCC
+
 void InitSPU_8001706C(void) {
     SpuReverbAttr spuReverbAttr;
 
