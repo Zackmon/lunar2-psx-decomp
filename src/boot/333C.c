@@ -146,10 +146,29 @@ u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfB
 
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetFilePositionFromCD_80015ff4);
+#ifndef NON_EQUIVALENT
+INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetWxaFile_8001618c);
+#else
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001618C);
+CdlLOC D_8008B190 __attribute__((section(".text")));
 
+char  D_8008A6F0 __attribute__((section(".text")));
+void GetWxaFile_8001618c(void) {
+    int iVar1; 
+    CdlFILE *pCVar2;
+    CdlFILE CStack32;
 
+    do {
+        iVar1 = CdReadSync(1,&CDResult_8008B188);
+    }while (0 < iVar1);
+
+    pCVar2 = CdSearchFile(&CStack32,&D_8008A6F0);
+
+    if (pCVar2 != (CdlFILE *) 0x0){
+        D_8008B190 = CStack32.pos;
+    }
+}
+#endif
 //INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
 
 
