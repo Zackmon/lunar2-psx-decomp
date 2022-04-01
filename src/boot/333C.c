@@ -1,12 +1,29 @@
 #include "common.h"
 
-#ifdef BLOCK
+
 int IsSPUInitilized;
+
+char D_8009B160;
+char D_8009B162;
+char D_8009B161;
+char D_8009B164;
+
+int D_8009B17C;
+
+u_char CDResult_8008B188  __attribute__((section(".text"))); //Require PSYQ as "section" is not avaialble in GCC
+
+short D_8009B166;
+short D_8009B168;
+
+char D_8009B163;
+
+char __attribute__((section(".scommon"))) SsTable; //Require PSYQ as "section" is not avaialble in GCC
+
 
 
 void func_80016A84(void);
 void func_80016A94();
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80012B3C);
 
@@ -111,9 +128,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015E50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015F60);
 
-#ifndef BLOCK
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
-#else
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
+
 u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfByte) {
     int numberOfReadBytes;
     u_int result;
@@ -126,23 +143,15 @@ u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfB
     }
     return numberOfByte;
 }
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetFilePositionFromCD_80015ff4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001618C);
 
-#ifndef NON_EQUIVALENT
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
-#else
-char D_8009B160;
-char D_8009B162;
-char D_8009B161;
-char D_8009B164;
 
-int D_8009B17C;
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
 
-u_char D_8008B188  __attribute__((section(".text"))); //Require PSYQ as "section" is not avaialble in GCC
 
 int InitCDAndLoadFiles_800161f4(void) {
     int v0;
@@ -154,7 +163,7 @@ int InitCDAndLoadFiles_800161f4(void) {
     func_80069464(0);
     v2[0] = 0x80;
 
-    CdControlB(0x0e, v2, &D_8008B188);
+    CdControlB(0x0e, v2, &CDResult_8008B188);
 
     VSync(3);
     v0 = GetFilePositionFromCD_80015ff4(0);
@@ -172,7 +181,6 @@ int InitCDAndLoadFiles_800161f4(void) {
     return 1;
 
 }
-#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016280);
 
@@ -192,25 +200,23 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016710);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
-#ifndef BLOCK
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
-#else
-short D_8009B166;
-short D_8009B168;
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
+
+
 void func_80016A84(void) {
     D_8009B166 = 0;
     D_8009B168 = 0;
 }
-#endif
 
-#ifndef BLOCK
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
-#else
-char D_8009B163;
+
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
+
 void func_80016A94() {
     D_8009B163 = 1;
 }
-#endif
+
 
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AA4);
@@ -229,10 +235,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BE8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
 
-#ifndef NON_EQUIVALENT
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
-#else
-char __attribute__((section(".scommon"))) SsTable; //Require PSYQ as "section" is not avaialble in GCC
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
+
 
 void InitSPU_8001706C(void) {
     SpuReverbAttr spuReverbAttr;
@@ -275,13 +280,13 @@ void InitSPU_8001706C(void) {
 
     IsSPUInitilized = 1;
 }
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
-#ifndef BLOCK
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
-#else
+
+//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
+
 void TerminateSPU_800172AC(void) {
     SpuReverbAttr v0;
     IsSPUInitilized = 0;
@@ -293,7 +298,7 @@ void TerminateSPU_800172AC(void) {
     SpuSetReverb(0);
     SsQuit();
 }
-#endif
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80017300);
 

@@ -44,16 +44,16 @@ AS              := $(CROSS)as -EL
 LD              := $(CROSS)ld -EL
 OBJCOPY         := $(CROSS)objcopy
 
-#CC_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/CC1PSX.EXE -quiet
-#CC_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/CC1PSX.EXE -quiet
+CC_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/CC1PSX.EXE -quiet
+CC_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/CC1PSX.EXE -quiet
 CC_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/CC1PSX.EXE -quiet
 CC_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/CC1PSX.EXE -quiet
 
 CC_GCC_263		:= ./tools/gcc-2.6.3/cc1
 CC_GCC_281		:= ./tools/gcc-2.8.1/cc1
 
-#AS_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/ASPSX.EXE -quiet
-#AS_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/ASPSX.EXE -quiet
+AS_PSYQ_40      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.0/ASPSX.EXE -quiet
+AS_PSYQ_41      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.1/ASPSX.EXE -quiet
 AS_PSYQ_43      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.3/ASPSX.EXE -quiet
 AS_PSYQ_46      := $(WINE) $(TOOLS_DIR)/psyq/psyq4.6/ASPSX.EXE -quiet
 
@@ -78,7 +78,7 @@ ifdef PERMUTER
 CPP_FLAGS       += -DPERMUTER
 endif
 
-CC_FLAGS        := -G0 -Wall -fno-builtin
+CC_FLAGS        := -G0 -Wall -fno-builtin -mno-split-addresses
 OPT_FLAGS       := -O2
 
 BOOT_LD_FLAGS   := -Map $(BOOT_TARGET).map -T config/$(BOOT_BASENAME).ld \
@@ -97,18 +97,28 @@ OBJCOPY_FLAGS   := -O binary
 # $(BUILD_DIR)/src/bootloader/1E4AC.c.o: AS_FLAGS :=
 # $(BUILD_DIR)/src/bootloader/1E4AC.c.o: CPP_FLAGS += -DINCLUDE_ASM
 
-#$(BUILD_DIR)/src/boot/95BC.c.o: CC := $(CC_PSYQ_46)
+$(BUILD_DIR)/src/boot/59C64.c.o: CC := $(CC_PSYQ_41)
+$(BUILD_DIR)/src/boot/59C64.c.o: CC_FLAGS := -G0 -Wall -fno-builtin
+#$(BUILD_DIR)/src/boot/59C64.c.o: CPP_FLAGS += -DNON_EQUIVALENT
 
-#$(BUILD_DIR)/src/boot/69564.c.o: CC := $(CC_GCC_263)
-#$(BUILD_DIR)/src/boot/69564.c.o: CPP_FLAGS += -DNON_EQUIVALENT
+$(BUILD_DIR)/src/boot/69564.c.o: CC := $(CC_PSYQ_41)
+$(BUILD_DIR)/src/boot/69564.c.o: CPP_FLAGS += -DNON_EQUIVALENT
+$(BUILD_DIR)/src/boot/69564.c.o: CC_FLAGS := -G0 -Wall -fno-builtin
 
 
-#$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_43)
-#$(BUILD_DIR)/src/boot/333C.c.o: CC_FLAGS := -G4 -Wall -fno-builtin
+
+#$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_GCC_281)
+#$(BUILD_DIR)/src/boot/333C.c.o: CC_FLAGS := -G0 -Wall -fno-builtin -mno-split-addresses
 #$(BUILD_DIR)/src/boot/333C.c.o: AS := $(AS_PSYQ_43)
 #$(BUILD_DIR)/src/boot/333C.c.o: AS_FLAGS :=
 #$(BUILD_DIR)/src/boot/333C.c.o: CPP_FLAGS += -DNON_EQUIVALENT
+#$(BUILD_DIR)/src/boot/333C.c.o: CPP_FLAGS += -DREQUIRE_G4
 #$(BUILD_DIR)/src/boot/333C.c.o: CPP_FLAGS += -DINCLUDE_ASM
+
+
+#$(BUILD_DIR)/src/boot/1B290.c.o: CC := $(CC_GCC_281)
+#$(BUILD_DIR)/src/boot/1B290.c.o: CC_FLAGS := -G0 -Wall -fno-builtin -mno-split-addresses
+#$(BUILD_DIR)/src/boot/1B290.c.o: CPP_FLAGS += -DREQUIRE_G4
 
 # psyq + objconverter
 ##$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_PSYQ_46)
