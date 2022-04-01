@@ -515,3 +515,7 @@ IsSPUInitilized = 0x8009B204;
 SsTable = 0x800AA698;
 
 CheckDiskType_8004088C = 0x8004088C;
+
+HiroPlayerData_80084231 = 0x80084231;
+
+CDResult_8008B188 = 0x8008B188;
