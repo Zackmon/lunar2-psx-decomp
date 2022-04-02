@@ -10,14 +10,14 @@ char D_8009B164;
 
 int D_8009B17C;
 
-u_char CDResult_8008B188  __attribute__((section(".text"))); //Require PSYQ as "section" is not avaialble in GCC
+u_char CDResult_8008B188  __attribute__((section(".text"))); //Require PSYQ as "section" is not avaialble in GCC!
 
 short D_8009B166;
 short D_8009B168;
 
 char D_8009B163;
 
-char __attribute__((section(".scommon"))) SsTable; //Require PSYQ as "section" is not avaialble in GCC
+char __attribute__((section(".scommon"))) SsTable; //Require PSYQ as "section" is not avaialble in GCC!
 
 
 
