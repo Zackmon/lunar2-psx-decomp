@@ -69,7 +69,18 @@ int func_80023730(void) {
    return *(int *)(D_8009B35C + 16);
 }
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80023744);
+int D_8009B324;
+int D_8009B340;
+short D_8009B31E;
+short D_8009B31C;
+
+void func_80023744(int a1, int a2) {
+    D_8009B324 = a1;
+    D_8009B340 = a2;
+    D_8009B31E = 0;
+    D_8009B31C = 0;
+    
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002375C);
 
@@ -131,7 +142,15 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80025280);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800252D4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002530C);
+int D_8009B388;
+int D_8009B380;
+
+void func_8002530C(void) {
+    D_8009B388 = (int)0x80175E80;
+    D_8009B380 = 0;    
+    
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80025324);
 
@@ -251,7 +270,15 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027FCC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027FFC);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028028);
+#else
+int D_800ACBE8[8]; // this must be a struct of some sort 
+void func_80028028(int a1, int a2) {
+
+    D_800ACBE8[a1] = a2;
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028040);
 

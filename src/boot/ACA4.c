@@ -80,7 +80,14 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BFD8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C058);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C110);
+#else
+char D_800AB590[3];
+char func_8001C110(int a1) {
+    return D_800AB590[a1]; 
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001C128);
 
@@ -214,7 +221,15 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FD54);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FDA4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FE2C);
+int func_8001FE2C(int a1) {
+
+    *(short *) (a1 + 34) = 0;
+    *(short *) (a1 + 32) = 0;
+    *(char *) (a1 + 39) = 0;
+    *(int *) (a1 + 56) = 0;
+
+    return 1;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FE44);
 
