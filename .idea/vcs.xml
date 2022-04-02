@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools/asm-differ" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/decomp-permuter" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools/m2ctx" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools/splat" vcs="Git" />
   </component>
