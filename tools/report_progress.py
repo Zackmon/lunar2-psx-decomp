@@ -40,7 +40,7 @@ def getColor(totalFuncCount, remainingFuncCount):
         return "yellow"
 
 def isIncludeAsm(line): return "INCLUDE_ASM" in line
-def isPartiallyDecompiled(line): return "#ifndef NON_MATCHING" in line
+def isPartiallyDecompiled(line): return "#ifndef NON_EQUIVALENT" in line
 def getLineScore(line):
     if isIncludeAsm(line) == True: return 1.0
     if isPartiallyDecompiled(line) == True: return -0.25

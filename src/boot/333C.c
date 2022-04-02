@@ -60,8 +60,30 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80013A5C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80014190);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800141C8);
+#else
+astruct __attribute__((section(".scommon"))) D_8008BA28;
 
+void func_800141C8(void) {
+   astruct *phi_v1;
+    int iVar2;
+   
+    phi_v1 = &D_8008BA28;
+    iVar2 = 0;
+    
+    do {
+        phi_v1->field20_0x14 = 0;
+        phi_v1->field86_0x59 = 0;
+        phi_v1->field85_0x58 = 0;
+        phi_v1 = phi_v1 +1;
+        iVar2 = iVar2 +1;
+        
+    }while (iVar2 < 0x140);
+    
+    return;
+}
+#endif
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800141F8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80014230);
@@ -128,9 +150,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015E50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80015F60);
 
-
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", ReadFileFromDisk_80015FC0);
-
 u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfByte) {
     int numberOfReadBytes;
     u_int result;
@@ -143,7 +162,6 @@ u_int ReadFileFromDisk_80015FC0(char *fileName, u_long *address, u_int numberOfB
     }
     return numberOfByte;
 }
-
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", GetFilePositionFromCD_80015ff4);
 #ifndef NON_EQUIVALENT
@@ -169,7 +187,6 @@ void GetWxaFile_8001618c(void) {
     }
 }
 #endif
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitCDAndLoadFiles_800161f4);
 
 
 int InitCDAndLoadFiles_800161f4(void) {
@@ -220,23 +237,15 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016710);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800169BC);
 
 
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A84);
-
-
 void func_80016A84(void) {
     D_8009B166 = 0;
     D_8009B168 = 0;
 }
 
 
-
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016A94);
-
 void func_80016A94() {
     D_8009B163 = 1;
 }
-
-
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AA4);
 
@@ -253,9 +262,6 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BDC);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BE8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016C0C);
-
-
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", InitSPU_8001706C);
 
 
 void InitSPU_8001706C(void) {
@@ -303,8 +309,6 @@ void InitSPU_8001706C(void) {
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_8001718C);
 
-
-//INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", TerminateSPU_800172AC);
 
 void TerminateSPU_800172AC(void) {
     SpuReverbAttr v0;
