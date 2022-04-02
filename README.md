@@ -1,6 +1,7 @@
 #  Lunar 2: Eternal Blue Complete PSX Decompilation
 ![build](https://github.com/Zackmon/lunar2-psx-decomp/workflows/build/badge.svg)
 ![progress SLUS_010.71](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Zackmon/lunar2-psx-decomp/gh-pages/assets/progress-boot.json)
+
 this is a  decompilation Project of "Lunar 2: Eternal Blue Complete" `SLUS_010.71` `SHA1:74660524724730e5a6acfe32ee33010fc3451e74`.
 
 ## Building
