@@ -184,7 +184,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F25C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F2A4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F2FC);
+
+int func_8002F2FC(int a1, int a2) {
+    return a2 + 8;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F304);
 
@@ -192,7 +196,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F344);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F3A8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F3D8);
+
+int func_8002F3D8(int a1, int a2) {
+    return a2 +2;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8002F3E0);
 
@@ -260,19 +268,53 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030304);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030368);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800303A0);
+int D_8009B480;
+int  func_800303A0(void) {
+    return *(int *)D_8009B480;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800303B4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030440);
+int D_8009B490;
+int D_8009B494;
+int D_8009B498;
+void func_80030440(int a1, int a2, int a3) {
+    D_8009B490 = a3;
+    D_8009B494 = a2;
+    D_8009B498 = a1;
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030454);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030468);
+int D_8009B484;
+int D_8009B488;
+int D_8009B48C;
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003047C);
+void func_80030454(int a1, int a2, int a3) {
+    D_8009B484 = a1;
+    D_8009B488 = a2;
+    D_8009B48C = a3;
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030488);
+int D_8009B49C;
+int D_8009B4A0;
+int D_8009B4A4;
+void func_80030468(int a1, int a2, int a3) {
+    D_8009B49C = a1;
+    D_8009B4A0 = a2;
+    D_8009B4A4 = a3;
+}
+
+int D_8009B4A8;
+void func_8003047C(int a1) {
+    D_8009B4A8 = a1;
+}
+
+
+char D_8009B4B0;
+void func_80030488(void) {
+    D_8009B4B0 = 0;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030494);
 
@@ -310,7 +352,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030D98);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030DB8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030E4C);
+int D_8009B4C0;
+void func_80030E4C(void) {
+    
+    D_8009B4C0 = (int) 0x800BA000;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80030E60);
 
@@ -346,7 +392,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80031588);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800315EC);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003161C);
+int D_8009B4D0;
+void func_8003161C(int a1) {
+    D_8009B4D0 = a1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80031628);
 
@@ -370,7 +420,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800319B0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800337B0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80033864);
+int D_8009B4D4;
+void func_80033864(int a1) {
+    D_8009B4D4 = a1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80033870);
 
@@ -476,7 +530,12 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035CA0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035CC4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035CE8);
+int D_8009B578;
+
+void func_80035CE8(void) {
+    D_8009B578 = 0;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035CF4);
 
@@ -492,9 +551,17 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035E4C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80035FE8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80036010);
+int D_8009A7E0;
+void func_80036010(void) {
+    D_8009A7E0 = 1;
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80036020);
+
+
+void func_80036020(void) {
+    D_8009A7E0 = 0;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003602C);
 
@@ -506,7 +573,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800361F0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80036238);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800362DC);
+char D_8009B598;
+void func_800362DC(void) {
+    D_8009B598 = 1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800362EC);
 
@@ -695,7 +766,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80039FFC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003A164);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003A1A0);
+short D_8009A9AC;
+void func_8003A1A0(short a1) {
+    D_8009A9AC = a1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8003A1AC);
 
@@ -1131,7 +1206,10 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80045C3C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80045C60);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80045D44);
+PlayerData HiroPlayerData_80084231;
+int func_80045D44(void) {
+   return HiroPlayerData_80084231.currentLevel;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80045D54);
 
@@ -1277,7 +1355,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004AA14);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004AA94);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004AB20);
+char D_8009B834;
+void func_8004AB20(void) {
+    D_8009B834 = 0;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004AB2C);
 
@@ -1314,12 +1396,19 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C498);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C4D0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C664);
+int func_8004C664 (int a1);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C8F8);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C958);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C9C4);
+int func_8004C9C4(int a1) {
+    int result;
+    result = a1;
+    *(int *) (a1 +44) = func_8004C664;
+
+    return a1;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004C9D8);
 
@@ -1412,7 +1501,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004EF0C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004EF94);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004F094);
+char D_8009B8CC;
+void func_8004F094(char a1) {
+    D_8009B8CC = a1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8004F0A0);
 
@@ -1515,7 +1608,14 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80052A4C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80052BB8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80052CAC);
+int func_80052CAC(char * a1) {
+   int result;
+    result = a1[110];
+    a1[162] = 0;
+    a1[106] = result;
+
+    return result;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80052CBC);
 
@@ -1573,7 +1673,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800547F4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800548C4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80054CF4);
+int D_8009B928;
+void func_80054CF4(void) {
+    D_8009B928 = 0;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80054D00);
 
@@ -1589,7 +1693,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_80054F80);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8005504C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800557AC);
+int D_8009B934;
+int D_8009B9C0;
+void func_800557AC(int a1, int a2) {
+    D_8009B934 = a2;
+    D_8009B9C0 = a1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_800557BC);
 
@@ -1719,7 +1829,15 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8005B980);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8005BAA0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8005BB40);
+int D_8009B028;
+int D_8009B030;
+int D_8009B02C;
+
+void func_8005BB40(void) {
+    D_8009B028 = 0;
+    D_8009B030 = 0;
+    D_8009B02C = 0;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/1B290", func_8005BB54);
 

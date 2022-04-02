@@ -113,4 +113,44 @@ typedef struct {
     char field91_0x5e;
     char field92_0x5f;
 } astruct;
+
+typedef struct  {
+    u_char currentLevel;
+    u_int currentExp;
+    u_int expToNextLevel;
+    u_short currentHP;
+    u_short maximumHP;
+    u_short currentMP;
+    u_short maximumMP;
+    u_short attack;
+    u_short numberOfAttacks;
+    u_short defense;
+    u_short agility;
+    u_short speed;
+    u_short wisdom;
+    u_short magicDef;
+    u_short range;
+    u_short luck;
+    u_short unknown;
+    u_int spellSlot1;
+    u_int spellSlot2;
+    u_int spellSlot3;
+    u_int spellSlot4;
+    u_int spellSlot5;
+    u_int spellSlot6;
+    u_int spellSlot7;
+    u_int spellSlot8;
+    u_int spellSlot9;
+    u_int spellSlot10;
+    u_int spellSlot11;
+    u_int spellSlot12;
+    u_int spellSlot13;
+    u_int spellSlot14;
+    u_int spellSlot15;
+    u_int spellSlot16;
+    u_int spellSlot17;
+    u_int spellSlot18;
+    u_int spellSlot19;
+    u_int spellSlot20;
+}PlayerData;
 #endif //LUNAR2ISO_COMMON_H

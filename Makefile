@@ -106,9 +106,10 @@ $(BUILD_DIR)/src/boot/69564.c.o: CPP_FLAGS += -DNON_EQUIVALENT
 $(BUILD_DIR)/src/boot/69564.c.o: CC_FLAGS := -G0 -Wall -fno-builtin
 
 
+$(BUILD_DIR)/src/boot/ACA4.c.o: CC_FLAGS := -G0 -Wall -fno-builtin
 
 #$(BUILD_DIR)/src/boot/333C.c.o: CC := $(CC_GCC_281)
-#$(BUILD_DIR)/src/boot/333C.c.o: CC_FLAGS := -G0 -Wall -fno-builtin -mno-split-addresses
+
 #$(BUILD_DIR)/src/boot/333C.c.o: AS := $(AS_PSYQ_43)
 #$(BUILD_DIR)/src/boot/333C.c.o: AS_FLAGS :=
 #$(BUILD_DIR)/src/boot/333C.c.o: CPP_FLAGS += -DNON_EQUIVALENT

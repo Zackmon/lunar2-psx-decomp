@@ -4,7 +4,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001A4A4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001A51C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001A5BC);
+short D_800AB390;
+short func_8001A5BC(void) {
+    return D_800AB390;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001A5CC);
 
@@ -52,7 +56,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BA84);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BAC0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BAE4);
+char func_8001BAE4(char a1, char a2) {
+    return ((a1 + a2 +7) & 7) +1;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BAF8);
 
@@ -222,13 +228,23 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020028);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020074);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002018C);
+
+int func_8002018C(astruct * a1, char a2) {
+   a1->field37_0x28 = a2;
+
+    return 1;
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020198);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800201A4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800201B0);
+int func_800201B0(astruct * a1, char a2) {
+   a1->field43_0x2e = a2;
+
+    return 1;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800201BC);
 
@@ -296,7 +312,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800222EC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022358);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022380);
+
+
+extern short D_800AB9CC;
+
+void func_80022380(void) {
+    D_800AB9CC = 0;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002238C);
 
