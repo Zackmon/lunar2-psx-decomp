@@ -153,4 +153,12 @@ typedef struct  {
     u_int spellSlot19;
     u_int spellSlot20;
 }PlayerData;
+
+int func_800235DC();
+void func_80022380(void);
+int func_8002807C(void);
+int func_8002805C(void);
+int func_800280FC(); 
+int func_800280BC();                                  /* extern */
+int func_8002809C(void);
 #endif //LUNAR2ISO_COMMON_H

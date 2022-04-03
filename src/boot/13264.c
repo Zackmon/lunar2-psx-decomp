@@ -123,6 +123,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80024A64);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80024B74);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80024DA0);
+int func_80024DA0();                                  /* extern */
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80024E38);
 
@@ -252,7 +253,16 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027C24);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027C80);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027CD8);
+int D_8009B3B4;
+int * func_80027CD8(int a1) {
+
+    int * result;
+    result = (int *) D_8009B3B4;
+    *(int *) D_8009B3B4 = -1;
+    result[1] = a1 - D_8009B3B4;
+
+    return result;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027CF8);
 
@@ -265,10 +275,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027E94);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027F50);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027FA0);
+u_int func_80027FA0(u_int a1);                                  /* extern */
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027FCC);
+int func_80027FCC(u_int a1);                                  /* extern */
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80027FFC);
+int func_80027FFC(u_int a1);                               /* extern */
 
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028028);
@@ -288,11 +301,20 @@ int func_80028040(int a1) {
 }
 #endif
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002805C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002807C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002809C);
+int func_8002805C(void) {
+    return func_80027FFC(0x1EE6) == 0;
+}
+
+
+int func_8002807C(void) {
+    return func_80027FFC(0x1EE8);
+}
+
+int func_8002809C(void) {
+    return func_80027FFC(0x1EE9) == 0;
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800280BC);
 
@@ -300,7 +322,17 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800280FC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002812C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002818C);
+int D_8009B3A8;
+int D_8009B3BC;
+void  func_8002818C(int a1, int a2) {
+    
+    if (a1!= 0){
+        D_8009B3A8 = -1;
+        }
+    if (a2!=0){
+        D_8009B3BC = -1;
+    }
+}
 
 int D_8009B3D8;
 extern int D_8008B288;
@@ -344,6 +376,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002889C);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800288C4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800288EC);
+int func_800288EC(int a1);                                  /* extern */
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028930);
 
@@ -370,9 +403,17 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028B14);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028B48);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028B80);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028BA0);
+
+u_int func_80028B80(int a1) {
+    return func_80027FA0(a1);
+}
+
+
+
+int func_80028BA0(u_int a1) {
+    return func_80027FCC(a1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80028BC0);
 
@@ -452,7 +493,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029490);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002953C);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002960C);
+int func_8002960C(int a1) {
+    return func_800288EC(a1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002962C);
 
@@ -468,13 +511,24 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_8002987C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029908);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800299F8);
+
+int func_800299F8(int a1) {
+    return func_800288EC(a1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029A18);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029A54);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029A74);
+
+int func_80029A54(void) {
+    return func_80024DA0();
+}
+
+
+
+int func_80029A74(int a1) {
+    return func_800288EC(a1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029A94);
 
@@ -484,11 +538,16 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029B54);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029B94);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029BD0);
+void func_80029BD0(void) {
+    func_8002839C(1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029BF0);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029C3C);
+
+void func_80029C3C(){
+    func_80022380();
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80029C5C);
 

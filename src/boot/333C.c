@@ -323,9 +323,17 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016AB4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016B28);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016B9C);
+int func_80016C0C();                                  /* extern */
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80016BBC);
+int func_80016B9C(void) {
+    return func_80016C0C();
+}
+
+void PadStopCom_0();                                   /* extern */
+
+void func_80016BBC(void) {
+    PadStopCom_0();
+}
 
 char D_8009A706;
 
