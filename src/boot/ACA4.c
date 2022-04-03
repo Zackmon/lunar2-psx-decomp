@@ -211,7 +211,17 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F73C);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001F9E8);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FAFC);
+#else
+void func_8001FAFC(int a1) {
+    
+    if (*(char *)(a1 + 42) != 0) {
+        *(char *)(a1 + 39) = 0;
+    }
+}
+
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001FB18);
 

@@ -135,9 +135,24 @@ void func_800148BC(int * a1, int *a2) {
 #endif
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800148D4);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800149C0);
+int func_800149C0(int a1) {
+    if (!a1) {
+        return 0;
+    }
+    *(char *)(a1 + 90) = 1;
+    return a1;
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800149DC);
+
+int func_800149DC(int a1) {
+    if (!a1) {
+        return 0;
+    }
+    *(char *) (a1 + 90) = 0;
+    return a1;
+
+}
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_800149F8);
 
@@ -453,7 +468,18 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80018BAC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80018BD8);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80018BE4);
+int D_8009B218;
+u_short func_80018BE4(void) {
+    u_short result;
+
+    result = 0;
+    if (D_8009B218){
+        result = *(u_short *) D_8009B218;
+    }
+
+    return result;
+    
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/333C", func_80018C00);
 
