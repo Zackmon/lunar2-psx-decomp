@@ -9,6 +9,7 @@
 #include "psyq/libsnd.h"
 #include "psyq/libspu.h"
 #include "psyq/libcd.h"
+#include "psyq/libmcrd.h"
 /*#include "psyq/memory.h"
 #include "psyq/libetc.h"
 #include "psyq/libpad.h"
@@ -161,4 +162,16 @@ int func_8002805C(void);
 int func_800280FC(); 
 int func_800280BC();                                  /* extern */
 int func_8002809C(void);
+void func_80026924(int a1);
+void func_800255BC (int a1);
+int func_80028804(int);                               /* extern */
+int func_80045D44(void);
+int func_80045E00();
+void func_800148D4(int, int);                            /* extern */
+int func_800149DC(int a1);
+int func_80035AD0(void (*f)(int) );
+int func_800149C0(int a1); //TODO this a1 parameter should be changed from int to astruct
+int func_800149DC(int a1); //TODO this a1 parameter should be changed from int to astruct
+astruct * func_8001441C(astruct * a1);
+void func_80014B2C(int a1);
 #endif //LUNAR2ISO_COMMON_H

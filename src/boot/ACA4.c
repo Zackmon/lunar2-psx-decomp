@@ -54,7 +54,11 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B9DC);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BA84);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001BAC0);
+void func_8001BAC0(int a1, short a2, short a3) {
+    *(short *) (a1 +2) = a2;
+    *(short *) (a1 +4) = a3;
+    func_80026924(a1);
+}
 
 char func_8001BAE4(char a1, char a2) {
     return ((a1 + a2 +7) & 7) +1;
