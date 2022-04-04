@@ -294,8 +294,10 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020508);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020630);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020694);
+extern int func_80020694;
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020800);
+extern int func_80020800;
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020920);
 
@@ -306,14 +308,23 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020B2C);
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020DE0);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80020F60);
+int func_80020F60(int a1, int a2, void (*f)(int), int a4);                             /* extern */
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80021124);
+void func_80021124(int a1, int a2) {
+    func_80020F60(a1, a2, &func_80020694, 0);
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002114C);
+void func_8002114C(int a1, int a2) {
+    func_80020F60(a1, a2, &func_80020694, 1);
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80021174);
+void func_80021174(int a1, int a2) {
+    func_80020F60(a1, a2, &func_80020800, 0);
+}
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002119C);
+void func_8002119C(int a1, int a2) {
+    func_80020F60(a1, a2, &func_80020800, 1);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800211C4);
 

@@ -174,4 +174,13 @@ int func_800149C0(int a1); //TODO this a1 parameter should be changed from int t
 int func_800149DC(int a1); //TODO this a1 parameter should be changed from int to astruct
 astruct * func_8001441C(astruct * a1);
 void func_80014B2C(int a1);
+
+
+int func_80022998(int);                                 /* extern */
+int func_80022C84(int);                                 /* extern */
+
+int func_8001BC1C(int);                                 /* extern */
+int func_800229CC();                                  /* extern */
+
+int func_8001D180();                                  /* extern */
 #endif //LUNAR2ISO_COMMON_H
