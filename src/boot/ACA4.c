@@ -356,9 +356,27 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022234);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800222EC);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022358);
+#else
+struc_800AB9C8 D_800AB9C8;
 
+void func_80022358(struc_800AB9C8* arg0) {
+   
+    int v2;
+    int v3;
 
+    
+    v3 = D_800AB9C8.field_8;
+    v2 = D_800AB9C8.field_4;
+    arg0->field_0 =  D_800AB9C8.field_0;
+    arg0->field_4 =  v2;
+    arg0->field_8 =  v3;
+    
+    return;
+    
+}
+#endif
 
 extern short D_800AB9CC;
 
