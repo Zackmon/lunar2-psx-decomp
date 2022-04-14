@@ -28,9 +28,9 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800234A4);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80023590);
 
-int D_8009B35C; // this must be a struct of some sort
+astruct_3 * D_8009B35C; // this must be a struct of some sort
 int func_800235C8(void) {
-   return *(int *)(D_8009B35C + 12);
+   return D_8009B35C -> field8_0xc;
 }
 
 int D_8009B354;
@@ -41,27 +41,27 @@ int func_800235DC(void) {
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800235E8);
 
-//int D_8009B35C;
+
 char D_8009B2F8;
 void func_80023620(void) {
 
-    if (*(char *) (D_8009B35C + 9)){
-        D_8009B2F8 = *(char *) (D_8009B35C + 9);
+    if (D_8009B35C-> field5_0x9){
+        D_8009B2F8 = D_8009B35C-> field5_0x9;
     }
 }
 
 
 
-int func_80023644(void) {
-   return *(u_char *) (D_8009B35C + 9); 
+char func_80023644(void) {
+   return D_8009B35C-> field5_0x9; 
 }
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80023658);
 
-int D_8009B35C;
+
 void func_80023698(int * a1, int * a2) {
-    *a1 = *(short *) (D_8009B35C + 2);
-    *a2 = *(short *) (D_8009B35C + 4);
+    *a1 = (int) D_8009B35C-> field1_0x2;
+    *a2 = (int) D_8009B35C-> field2_0x4;
 }
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_800236C0);
@@ -72,13 +72,13 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/13264", func_80023710);
 
 
 
-int func_8002371C(void) {
-    return *(u_char *) (D_8009B35C + 10); 
+char func_8002371C(void) {
+    return D_8009B35C -> field6_0xa; 
 }
 
 
 int func_80023730(void) {
-   return *(int *)(D_8009B35C + 16);
+   return D_8009B35C -> field9_0x10;
 }
 
 int D_8009B324;

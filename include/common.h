@@ -10,6 +10,7 @@
 #include "psyq/libspu.h"
 #include "psyq/libcd.h"
 #include "psyq/libmcrd.h"
+#include "psyq/memory.h"
 /*#include "psyq/memory.h"
 #include "psyq/libetc.h"
 #include "psyq/libpad.h"
@@ -161,6 +162,20 @@ typedef struct
   int field_8;
 } struc_800AB9C8;
 
+
+typedef struct {
+    short field0_0x0;
+    short field1_0x2;
+    short field2_0x4;
+    u_short field3_0x6;
+    u_char field4_0x8;
+    char field5_0x9;
+    char field6_0xa;
+    u_char field7_0xb;
+    int field8_0xc;
+    int field9_0x10;
+}astruct_3;
+
 int func_800235DC();
 void func_80022380(void);
 int func_8002807C(void);
@@ -194,4 +209,6 @@ int func_80045E10(int);                               /* extern */
 void func_80014B1C(int a1, int a2);
 
 void * func_8005EF94 (int a1);
+void func_80023E74();
+int func_800245C8();
 #endif //LUNAR2ISO_COMMON_H

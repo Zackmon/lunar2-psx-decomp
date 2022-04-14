@@ -34,9 +34,14 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B050);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B298);
 
-INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B374);
+int func_8001B3A0(u_char *, int, int);                        /* extern */
+extern int D_8008B294;
+void func_8001B374(int arg0) {
+    func_8001B3A0(&D_8008B294, arg0, 6);
+}
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B3A0);
+
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8001B3DC);
 
@@ -350,7 +355,16 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022158);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800221B0);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022208);
+#else
+struc_800AB9C8 D_800AB9C8;
+int D_8009B2A8;
+void func_80022208(void) {
+    memset(&D_800AB9C8,0,sizeof(struc_800AB9C8));
+    D_8009B2A8 = 0;
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022234);
 
@@ -359,7 +373,7 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800222EC);
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022358);
 #else
-struc_800AB9C8 D_800AB9C8;
+//struc_800AB9C8 D_800AB9C8; defined above
 
 void func_80022358(struc_800AB9C8* arg0) {
    
@@ -396,7 +410,16 @@ INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022688);
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_800228A4);
 
+#ifndef NON_EQUIVALENT
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_8002296C);
+#else // it's not matching because D_8009B338 should be gp_rel insted of hi and low
+int D_8009B338;
+void func_8002296C(void) {
+    func_80023E74();
+    D_8009B338 = 0;
+    func_800245C8();
+}
+#endif
 
 INCLUDE_ASM("config/../asm/boot/nonmatchings/ACA4", func_80022998);
 
